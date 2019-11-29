@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: #fff;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+}
+
+nav {
+  background-color: #1D2228;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+
+}
+
+nav li {
+  float: left;
+
+}
+
+nav a {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.2em;
+  display: block;
+  overflow: hidden;
+  padding: 0.7em 1em;
+  margin: 0;
+  color: #ddd;
+  white-space: nowrap;
+  transition: 0.2s;
+
+}
+
+nav #links {float: right;}
+
+/*nav #pages a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+
+}*/
+
+nav a:hover, a:hover .icon {
+  color: #fff;
+
+}
+
+#scrolldiv {
+  scroll-behavior: smooth;
+	margin-top: 49.375px;
+	height: calc(100vh - 49.375px);
+	overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+
+.section {
+  margin: 0;
+  padding: 20px;
+
+}
+
+#footer {
+  color: #fff;
+  background-color: #1D2228;
+  padding-bottom: 60px;
+
+}
+
+#footer a {color: #999;}
+
+#footer a:hover, a:hover .icon {
+  color: #fff;
+
+}
+
+p {
+  font-size: 0.8em;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+
+}
+
+@media only screen and(max-width: 1000px) {
+  #content {background-color: #red;}
+
+}
