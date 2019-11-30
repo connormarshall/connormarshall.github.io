@@ -21,7 +21,7 @@ a {
 
 nav {
   color: #fff;
-  transition: 0.2s;
+  transition: 0.3s;
   z-index: 1000;
   width: 100%;
   position: fixed;
@@ -43,6 +43,13 @@ nav li {
 
 }
 
+.pastbanner {
+  color: #000;
+  background-color: #fff;
+  box-shadow: 0 1px #ddd;
+
+}
+
 nav a, #drawer a {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.4em;
@@ -58,25 +65,25 @@ nav a, #drawer a {
 nav #menubutton {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-size: 1.8em;
   float: right;
   display: none;
 
 }
-nav #menubutton .fa-arrow-right { color: #999; }
-nav #menubutton .fa-arrow-right:hover { color: #555; }
+
+nav #menubutton .fa-arrow-right { color: #fff; }
 
 nav .links {float: right;}
 
 a i { transition: 0.2s; }
-
-nav a:hover, #drawer a:hover, a:hover i { color: #555; }
+#drawer a:hover, #drawer a:hover i { color: #999; }
 
 #drawer {
   display: none;
   background-color: #1D2228;
   width: 100%;
 	height: 100vh;
-  color: #999;
+  color: #fff;
   position: fixed;
   right: -100%;
   z-index: 999;
@@ -104,9 +111,24 @@ nav a:hover, #drawer a:hover, a:hover i { color: #555; }
 
 .section {
   position: relative;
+  box-sizing: border-box;
   height: 100vh;
   margin: 0;
-  padding: 20px 20px 0;
+  padding: 70px 20px 0 35px;
+
+}
+
+.section::after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+
+}
+
+.section h2 {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
 
 }
 
@@ -114,19 +136,26 @@ nav a:hover, #drawer a:hover, a:hover i { color: #555; }
   scroll-snap-align: start;
   color: #fff;
   text-align: center;
-  /*background: rgb(125,182,201);
-  background: linear-gradient(146deg, rgba(125,182,201,1) 0%, rgba(55,209,158,1) 100%);
-  */
+  background: #c72c41;
   background-image: url('../res/banner.png');
+  background-size: 4098px;
   background-repeat: tile;
 
 }
 
 #banner h1 {
+  word-spacing: -10em;
   margin-top: 30vh;
   margin-bottom: 3vh;
   font-family: 'Ubuntu', sans-serif;
   font-size: 4em;
+
+}
+
+#banner h1 div {
+  width: 4em;
+  display: inline-block;
+  overflow: hidden;
 
 }
 
@@ -151,7 +180,27 @@ nav a:hover, #drawer a:hover, a:hover i { color: #555; }
 
 }
 
-#aboutme { scroll-snap-align: start; }
+#aboutme {
+  scroll-snap-align: start;
+  height: auto;
+
+}
+
+#aboutme strong { white-space: nowrap; }
+#aboutme #workwithme {
+  float: right;
+  margin-left: 20%;
+  margin-right: 5%;
+  text-align: right;
+
+}
+#aboutme div {
+  font-size: 1.3em;
+  width: 50%;
+  margin: 100px 20% 0 5%;
+
+}
+
 #projects { scroll-snap-align: start; }
 
 #contacts {
@@ -188,6 +237,14 @@ nav a:hover, #drawer a:hover, a:hover i { color: #555; }
 
   }
 
+  #aboutme div, #aboutme #workwithme {
+    text-align: center;
+    float: none;
+    width: 100%;
+    margin: 0;
+
+  }
+
 }
 
 @media only screen and (max-width: 620px) {
@@ -203,9 +260,21 @@ nav a:hover, #drawer a:hover, a:hover i { color: #555; }
     background-color: transparent;
 
   }
+
   nav ul { display: none; }
   nav #menubutton { display: block; }
+  .pastbanner {
+    box-shadow: none;
+    background-color: transparent;
+
+  }
+
+  .pastcontacts { color: #fff; }
 
   #drawer { display: block; }
+
+  .section { padding-top: 20px; }
+
+  #banner h1 div { width: 100%; }
 
 }

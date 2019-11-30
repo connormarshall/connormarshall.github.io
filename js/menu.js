@@ -37,30 +37,18 @@ window.onscroll = function() {
 		else
 	    navBar.style.top = "-60px";
 
-		if(currentScrollPos >= about.offsetTop - 50) {
-			navBar.style.color = '#000';
-			navBar.style.backgroundColor = '#fff';
-			navBar.style.boxShadow = '0 1px #ddd';
-
-		} else {
-			navBar.style.color = '#fff';
-			navBar.style.backgroundColor = 'transparent';
-			navBar.style.boxShadow = 'none';
-
-		}
-
-	} else {
-		navBar.style.backgroundColor = 'transparent';
-		navBar.style.boxShadow = 'none';
-
-		if(currentScrollPos >= contacts.offsetTop - 50)
-			navBar.style.color = '#999';
-		else if(currentScrollPos >= about.offsetTop - 50)
-			navBar.style.color = '#000';
-		else
-			navBar.style.color = '#fff';
-
 	}
+
+	if(currentScrollPos >= about.offsetTop - 50)
+		navBar.classList.add('pastbanner');
+	else
+		navbar.classList.remove('pastbanner');
+
+	if(currentScrollPos >= contacts.offsetTop - 50)
+		navBar.classList.add('pastcontacts');
+	else
+		navBar.classList.remove('pastcontacts');
+
   prevScrollpos = currentScrollPos;
 
 }
