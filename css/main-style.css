@@ -7,6 +7,7 @@ body {
 }
 
 a {
+  text-align: center;
   text-decoration: none;
   color: inherit;
 
@@ -15,49 +16,76 @@ a {
 nav {
   background-color: #1D2228;
   width: 100%;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
 
 }
 
-nav ul {
+nav ul, #drawer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: inline-flex;
 
 }
 
 nav li {
   float: left;
+  text-align: center;
 
 }
 
-nav a {
+nav a, #drawer a {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.2em;
   display: block;
   overflow: hidden;
   padding: 0.7em 1em;
   margin: 0;
-  color: #ddd;
+  color: #ccc;
   white-space: nowrap;
   transition: 0.2s;
 
 }
 
-nav #links {float: right;}
-
-/*nav #pages a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-
-}*/
-
-nav a:hover, a:hover .icon {
-  color: #fff;
+nav #menubutton {
+  float: right;
+  display: none;
 
 }
+
+nav #links {float: right;}
+
+nav a:hover, #drawer a:hover, a:hover .icon { color: #fff; }
+
+#drawer {
+  display: none;
+  background-color: #1D2228;
+  width: 100%;
+	height: calc(100vh - 49.375px);
+  color: #fff;
+  position: absolute;
+  right: -100%;
+  z-index: 1000;
+  transition: 0.2s;
+
+}
+
+#drawer #pages li {
+  width: 50%;
+  margin: 0 25%;
+
+}
+
+#drawer #links {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 5%;
+
+}
+
+#drawer #links a { display: inline-block; }
 
 #scrolldiv {
   scroll-behavior: smooth;
@@ -71,6 +99,11 @@ nav a:hover, a:hover .icon {
 .section {
   margin: 0;
   padding: 20px;
+
+}
+
+#content {
+  height: 150vh;
 
 }
 
@@ -95,7 +128,17 @@ p {
 
 }
 
-@media only screen and(max-width: 1000px) {
-  #content {background-color: #red;}
+@media only screen and (max-width: 550px) {
+  nav ul {
+    display: none;
+
+  }
+
+  nav #menubutton {
+    display: block;
+
+  }
+
+  #drawer { display: block; }
 
 }
