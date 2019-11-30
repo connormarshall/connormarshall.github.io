@@ -61,7 +61,7 @@ nav #menubutton {
 nav #menubutton .fa-arrow-right { color: #999; }
 nav #menubutton .fa-arrow-right:hover { color: #555; }
 
-nav #links {float: right;}
+nav .links {float: right;}
 
 a i { transition: 0.2s; }
 
@@ -80,36 +80,38 @@ nav a:hover, #drawer a:hover, a:hover i { color: #555; }
 
 }
 
-#drawer #pages { margin-top: 50px; }
+#drawer .pages { margin-top: 50px; }
 
-#drawer #pages li {
+#drawer .pages li {
   width: 50%;
   margin: 0 25%;
 
 }
 
-#drawer #links {
+#drawer .links {
   position: absolute;
   text-align: center;
   width: 100%;
-  bottom: 5%;
+  bottom: 10%;
 
 }
 
-#drawer #links a { display: inline-block; }
+#drawer .links a { display: inline-block; }
 
 .section {
+  position: relative;
+  height: 100vh;
   margin: 0;
-  padding: 20px;
+  padding: 20px 20px 0;
 
 }
 
 #banner {
+  scroll-snap-align: start;
   color: #fff;
-  height: 100vh;
   text-align: center;
   background: rgb(125,182,201);
-background: linear-gradient(146deg, rgba(125,182,201,1) 0%, rgba(55,209,158,1) 100%);
+  background: linear-gradient(146deg, rgba(125,182,201,1) 0%, rgba(55,209,158,1) 100%);
 
 }
 
@@ -142,25 +144,31 @@ background: linear-gradient(146deg, rgba(125,182,201,1) 0%, rgba(55,209,158,1) 1
 
 }
 
-#content { height: 100vh; }
+#aboutme { scroll-snap-align: start; }
+#projects { scroll-snap-align: start; }
 
-#footer {
+#contact {
+  scroll-snap-align: start;
   color: #fff;
   background-color: #1D2228;
-  padding-bottom: 60px;
 
 }
 
-#footer a {color: #999;}
+#contact a {color: #999;}
 
-#footer a:hover, #footer a:hover .icon {
+#contact a:hover, #footer a:hover .icon {
   color: #fff;
 
 }
 
-p {
+#contact p {
+  position: absolute;
+  bottom: 10%;
   font-size: 0.8em;
   text-align: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 
 }
 
@@ -175,16 +183,17 @@ p {
 
 }
 
-@media only screen and (max-width: 550px) {
-  nav ul {
-    display: none;
+@media only screen and (max-width: 620px) {
+  html {
+    scroll-snap-type: mandatory;
+    scroll-snap-points-y: repeat(100vh);
+    scroll-snap-type: y mandatory;
 
   }
 
-  nav #menubutton {
-    display: block;
-
-  }
+  nav { top: 0; }
+  nav ul { display: none; }
+  nav #menubutton { display: block; }
 
   #drawer { display: block; }
 
