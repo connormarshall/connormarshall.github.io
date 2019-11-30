@@ -1,7 +1,8 @@
+html { scroll-behavior: smooth; }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  scroll-behavior: smooth;
   margin: 0;
   background-color: #fff;
   height: 100vh;
@@ -19,6 +20,7 @@ a {
 }
 
 nav {
+  color: #fff;
   transition: 0.2s;
   z-index: 1000;
   width: 100%;
@@ -54,6 +56,8 @@ nav a, #drawer a {
 }
 
 nav #menubutton {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   float: right;
   display: none;
 
@@ -110,16 +114,19 @@ nav a:hover, #drawer a:hover, a:hover i { color: #555; }
   scroll-snap-align: start;
   color: #fff;
   text-align: center;
-  background: rgb(125,182,201);
+  /*background: rgb(125,182,201);
   background: linear-gradient(146deg, rgba(125,182,201,1) 0%, rgba(55,209,158,1) 100%);
+  */
+  background-image: url('../res/banner.png');
+  background-repeat: tile;
 
 }
 
 #banner h1 {
-  margin-top: 40vh;
+  margin-top: 30vh;
   margin-bottom: 3vh;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 5em;
+  font-size: 4em;
 
 }
 
@@ -147,21 +154,21 @@ nav a:hover, #drawer a:hover, a:hover i { color: #555; }
 #aboutme { scroll-snap-align: start; }
 #projects { scroll-snap-align: start; }
 
-#contact {
+#contacts {
   scroll-snap-align: start;
   color: #fff;
   background-color: #1D2228;
 
 }
 
-#contact a {color: #999;}
+#contacts a {color: #999;}
 
-#contact a:hover, #footer a:hover .icon {
+#contacts a:hover, #footer a:hover .icon {
   color: #fff;
 
 }
 
-#contact p {
+#contacts p {
   position: absolute;
   bottom: 10%;
   font-size: 0.8em;
@@ -191,7 +198,11 @@ nav a:hover, #drawer a:hover, a:hover i { color: #555; }
 
   }
 
-  nav { top: 0; }
+  nav {
+    top: 0;
+    background-color: transparent;
+
+  }
   nav ul { display: none; }
   nav #menubutton { display: block; }
 

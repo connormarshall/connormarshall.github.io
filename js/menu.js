@@ -27,11 +27,38 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
 	var navButton = document.querySelector('#menubutton');
 
+	var navBar = document.querySelector('#navbar');
+	var about = document.querySelector('#aboutme');
+	var contacts = document.querySelector('#contacts');
+
 	if(window.getComputedStyle(navButton).display === 'none') {
 	  if (prevScrollpos > currentScrollPos)
-	    document.getElementById("navbar").style.top = "0";
+	    navBar.style.top = "0";
 		else
-	    document.getElementById("navbar").style.top = "-50px";
+	    navBar.style.top = "-60px";
+
+		if(currentScrollPos >= about.offsetTop - 50) {
+			navBar.style.color = '#000';
+			navBar.style.backgroundColor = '#fff';
+			navBar.style.boxShadow = '0 1px #ddd';
+
+		} else {
+			navBar.style.color = '#fff';
+			navBar.style.backgroundColor = 'transparent';
+			navBar.style.boxShadow = 'none';
+
+		}
+
+	} else {
+		navBar.style.backgroundColor = 'transparent';
+		navBar.style.boxShadow = 'none';
+
+		if(currentScrollPos >= contacts.offsetTop - 50)
+			navBar.style.color = '#999';
+		else if(currentScrollPos >= about.offsetTop - 50)
+			navBar.style.color = '#000';
+		else
+			navBar.style.color = '#fff';
 
 	}
   prevScrollpos = currentScrollPos;
