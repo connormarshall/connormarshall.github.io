@@ -19,3 +19,21 @@ function toggleBetweenClasses(el, c1, c2) {
   el.classList.toggle(c2);
 
 }
+
+//Hiding nav on scroll
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+	var navButton = document.querySelector('#menubutton');
+
+	if(window.getComputedStyle(navButton).display === 'none') {
+	  if (prevScrollpos > currentScrollPos)
+	    document.getElementById("navbar").style.top = "0";
+		else
+	    document.getElementById("navbar").style.top = "-50px";
+
+	}
+  prevScrollpos = currentScrollPos;
+
+}

@@ -2,6 +2,11 @@
 
 <html>
   <head>
+
+    <title>Connor Marshall</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--SCRIPTS-->
 
     <!--Font Awesome-->
@@ -12,14 +17,14 @@
     <!--STYLE-->
 
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|Ubuntu&display=swap" rel="stylesheet">
     <!--Style-->
     <link rel="stylesheet" type="text/css" href="css/main-style.css">
 
   </head>
 
   <body>
-    <nav>
+    <nav id="navbar">
 
       <ul id="pages">
         <li><a href="#">projects</a></li>
@@ -28,18 +33,18 @@
       </ul>
 
       <a id="menubutton" onclick="moveDrawer(this);">
-        <i class="fas fa-bars icon"></i>
+        <i class="fas fa-bars"></i>
       </a>
 
       <ul id="links">
         <li>
           <a title="Github" href="https://github.com/connormarshall">
-            <i class="icon fab fa-github"></i>
+            <i class="fab fa-github"></i>
           </a>
         </li>
         <li>
           <a title="Instagram" href="https://instagram.com">
-            <i class="icon fab fa-instagram"></i>
+            <i class="fab fa-instagram"></i>
           </a>
         </li>
       </ul>
@@ -56,28 +61,35 @@
 
       <div id="links">
         <a title="Github" href="https://github.com/connormarshall">
-          <i class="icon fab fa-github"></i>
+          <i class="fab fa-github"></i>
         </a>
 
         <a title="Instagram" href="https://instagram.com">
-          <i class="icon fab fa-instagram"></i>
+          <i class="fab fa-instagram"></i>
         </a>
       </div>
 
     </div>
 
-    <div id="scrolldiv">
+    <div id="banner" class="section">
 
-      <div id="content" class="section"></div>
-
-
-      <div id="footer" class="section">
-        <p>&copy; Connor Marshall 2019 <br>
-          <a href="#">Email</a> | <a href="#">Github</a>
-        </p>
-
+      <h1>Connor Marshall</h1>
+      <div id="subheader">
+        <div>first</div>
+        <div>|</div>
+        <div>second</div>
+        <div>|</div>
+        <div>third</div>
       </div>
 
+    </div>
+
+    <div id="content" class="section"></div>
+
+    <div id="footer" class="section">
+      <p>&copy; Connor Marshall 2019 <br>
+        <a href="#">Email</a> | <a href="#">Github</a>
+      </p>
     </div>
 
   </body>
