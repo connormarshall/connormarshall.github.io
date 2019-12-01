@@ -135,6 +135,7 @@ a i { transition: 0.2s; }
 }
 
 #banner {
+  padding: 20px;
   scroll-snap-align: start;
   color: #fff;
   text-align: center;
