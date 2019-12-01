@@ -25,21 +25,12 @@ var prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-	var navButton = document.querySelector('#menubutton');
 
 	var navBar = document.querySelector('#navbar');
-	var about = document.querySelector('#aboutme');
+	var upTo = document.querySelector('#upto');
 	var contacts = document.querySelector('#contacts');
 
-	if(window.getComputedStyle(navButton).display === 'none') {
-	  if (prevScrollpos > currentScrollPos)
-	    navBar.style.top = "0";
-		else
-	    navBar.style.top = "-60px";
-
-	}
-
-	if(currentScrollPos >= about.offsetTop - 50)
+	if(currentScrollPos >= upTo.offsetTop - 50)
 		navBar.classList.add('pastbanner');
 	else
 		navbar.classList.remove('pastbanner');

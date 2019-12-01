@@ -20,6 +20,7 @@ a {
 }
 
 nav {
+  font-size: 1.6em;
   color: #fff;
   transition: 0.3s;
   z-index: 1000;
@@ -44,6 +45,7 @@ nav li {
 }
 
 .pastbanner {
+  font-size: 1.4em;
   color: #000;
   background-color: #fff;
   box-shadow: 0 1px #ddd;
@@ -52,7 +54,6 @@ nav li {
 
 nav a, #drawer a {
   font-family: "Ubuntu", sans-serif;
-  font-size: 1.4em;
   display: block;
   overflow: hidden;
   padding: 0.7em 1em;
@@ -63,9 +64,9 @@ nav a, #drawer a {
 }
 
 nav #menubutton {
+  font-size: 1.4em;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 1.8em;
   float: right;
   display: none;
 
@@ -79,6 +80,7 @@ a i { transition: 0.2s; }
 #drawer a:hover, #drawer a:hover i { color: #999; }
 
 #drawer {
+  font-size: 1.6em;
   display: none;
   background-color: #1D2228;
   width: 100%;
@@ -91,7 +93,7 @@ a i { transition: 0.2s; }
 
 }
 
-#drawer .pages { margin-top: 50px; }
+#drawer .pages { margin-top: 80px; }
 
 #drawer .pages li {
   width: 50%;
@@ -114,7 +116,7 @@ a i { transition: 0.2s; }
   box-sizing: border-box;
   height: 100vh;
   margin: 0;
-  padding: 70px 20px 0 35px;
+  padding: 85px 20px 0 35px;
 
 }
 
@@ -144,7 +146,7 @@ a i { transition: 0.2s; }
 }
 
 #banner h1 {
-  word-spacing: -10em;
+  word-spacing: 0em;
   margin-top: 30vh;
   margin-bottom: 3vh;
   font-family: 'Ubuntu', sans-serif;
@@ -180,24 +182,16 @@ a i { transition: 0.2s; }
 
 }
 
-#aboutme {
+#upto {
+  transition: 0.2s;
   scroll-snap-align: start;
-  height: auto;
 
 }
 
-#aboutme strong { white-space: nowrap; }
-#aboutme #workwithme {
-  float: right;
-  margin-left: 20%;
-  margin-right: 5%;
-  text-align: right;
-
-}
-#aboutme div {
-  font-size: 1.3em;
-  width: 50%;
-  margin: 100px 20% 0 5%;
+#upto p {
+  text-align: center;
+  width: 30em;
+  margin: 20px auto;
 
 }
 
@@ -237,14 +231,6 @@ a i { transition: 0.2s; }
 
   }
 
-  #aboutme div, #aboutme #workwithme {
-    text-align: center;
-    float: none;
-    width: 100%;
-    margin: 0;
-
-  }
-
 }
 
 @media only screen and (max-width: 620px) {
@@ -272,9 +258,9 @@ a i { transition: 0.2s; }
   .pastcontacts { color: #fff; }
 
   #drawer { display: block; }
-
   .section { padding-top: 20px; }
-
   #banner h1 div { width: 100%; }
+
+  #upto p { width: 80%; }
 
 }
