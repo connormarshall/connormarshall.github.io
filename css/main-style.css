@@ -22,7 +22,7 @@ a {
 nav {
   font-size: 1.6em;
   color: #fff;
-  transition: 0.3s;
+  transition: 0.2s;
   z-index: 1000;
   width: 100%;
   position: fixed;
@@ -42,6 +42,9 @@ nav li {
   float: left;
   text-align: center;
 
+}
+
+nav #logo {
 }
 
 .pastbanner {
@@ -69,6 +72,8 @@ nav #menubutton {
   box-sizing: border-box;
   float: right;
   display: none;
+
+  padding-right: 20px;
 
 }
 
@@ -136,7 +141,7 @@ a i { transition: 0.2s; }
 
 #banner {
   padding: 20px;
-  scroll-snap-align: start;
+  /*scroll-snap-align: start;*/
   color: #fff;
   text-align: center;
   background: #c72c41;
@@ -147,6 +152,11 @@ a i { transition: 0.2s; }
 }
 
 #banner h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
   word-spacing: 0em;
   margin-top: 30vh;
   margin-bottom: 3vh;
@@ -185,7 +195,7 @@ a i { transition: 0.2s; }
 
 #upto {
   transition: 0.2s;
-  scroll-snap-align: start;
+  /*scroll-snap-align: start;*/
 
 }
 
@@ -196,10 +206,10 @@ a i { transition: 0.2s; }
 
 }
 
-#projects { scroll-snap-align: start; }
+/*#projects { scroll-snap-align: start; }*/
 
 #contacts {
-  scroll-snap-align: start;
+  /*scroll-snap-align: start;*/
   color: #fff;
   background-color: #1D2228;
 
@@ -236,9 +246,9 @@ a i { transition: 0.2s; }
 
 @media only screen and (max-width: 620px) {
   html {
-    scroll-snap-type: mandatory;
+    /*scroll-snap-type: mandatory;
     scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;*/
 
   }
 
@@ -260,7 +270,6 @@ a i { transition: 0.2s; }
 
   #drawer { display: block; }
   .section { padding-top: 20px; }
-  #banner h1 div { width: 100%; }
 
   #upto p { width: 80%; }
 
