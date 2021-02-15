@@ -73,6 +73,7 @@ nav #menubutton {
   float: right;
   display: none;
 
+  padding-top: 15px;
   padding-right: 20px;
 
 }
@@ -121,7 +122,7 @@ a i { transition: 0.2s; }
   box-sizing: border-box;
   height: 100vh;
   margin: 0;
-  padding: 85px 20px 0 35px;
+  padding: 85px 35px 0 35px;
 
 }
 
@@ -199,14 +200,17 @@ a i { transition: 0.2s; }
 
 }
 
-#upto p {
-  text-align: center;
+.section p {
+  text-align: justify;
   width: 30em;
   margin: 20px auto;
 
 }
 
-/*#projects { scroll-snap-align: start; }*/
+#projects {
+  /*scroll-snap-align: start;*/
+
+}
 
 #contacts {
   /*scroll-snap-align: start;*/
@@ -263,6 +267,7 @@ a i { transition: 0.2s; }
   .pastbanner {
     box-shadow: none;
     background-color: transparent;
+    font-size: 1.6em;
 
   }
 
@@ -270,7 +275,12 @@ a i { transition: 0.2s; }
 
   #drawer { display: block; }
   .section { padding-top: 20px; }
+  .section p { width: 80%; }
 
-  #upto p { width: 80%; }
+}
 
+#solar-system {
+  margin-top: 40px;
+  background: #87cfff;
+  border: 1px solid lightgray;
 }
